@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- rich text editor -->
+  <link rel="stylesheet" href="/richtexteditor/richtexteditor/rte_theme_default.css" />
+  <script type="text/javascript" src="/richtexteditor/richtexteditor/rte.js"></script>
+  <script type="text/javascript" src='/richtexteditor/richtexteditor/plugins/all_plugins.js'></script>
+  <!-- rih text editor end -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+ 
+
+</head>
+<body contenteditable="false">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top" wicket:id="menuPanel"></div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home" wicket:id="headerPanel">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" >
+  <!-- Info Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> New Post</h2>
+
+  </div>
+  <div class="w3-display-container">
+
+    <div id="div_editor1" >
+    <form id="newPostForm" method="post" wicket:id="newPostForm">
+
+      <div wicket:id="createArticle" class="w3-display-container w3-content w3-wide" ></div>
+        <br>
+
+        <p>
+        <span>Title: </span><input wicket:id="titleField" type="text" id="title"><br/>
+        </p>
+        <p>
+        <span>Select Technology</span> <select wicket:id="technology"></select>
+        </p>
+        <p>
+        <textarea class="content" rows="10" cols="150" wicket:id="contentArea" type="text" id="content"></textarea><br/>
+        </p>
+        
+        <p>
+          <input type="submit" name="Publish" value="Publish"/>
+        </p>
+
+      </form>
+    </div>
+
+
+ 
+    
+  </div>
+</div>
+<script>
+  var editor1cfg = {}
+  editor1cfg.toolbar = "default";
+  var editor1 = new RichTextEditor("#content", editor1cfg);
+</script>
+<script>
+  function btnShowText() {      
+  alert(editor1.getText())      
+}
+</script>
+</body>
+</html>

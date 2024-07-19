@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body contenteditable="false">
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top" wicket:id="menuPanel"></div>
+  
+  <!-- Header -->
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home" wicket:id="headerPanel">
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+    </div>
+  </header>
+  
+  <!-- Page content -->
+  <div class="w3-content w3-padding" >
+
+    <!-- Info Section -->
+    <div class="w3-container w3-padding-32" id="about">
+      <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Blog di consultazione argomenti IT - Web 
+        Development </h2>
+
+    </div>
+
+
+
+    <!-- Dev Section -->
+    <div class="w3-container w3-padding-32" id="devHeader">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Dev</h3>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom" wicket:id="dev">
+        <div class="w3-display-container" wicket:id="tech"></div>
+      </div>
+    </div>
+
+    <!-- Frameworks Section -->
+    <div class="w3-container w3-padding-32" id="frameworksHeader">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Frameworks</h3>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom" wicket:id="frameworks">
+        <div class="w3-display-container" wicket:id="tech"></div>
+      </div>
+    </div>
+
+
+
+    <!-- Developer Tools Section -->
+    <div class="w3-container w3-padding-32" id="persistenceHeader">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Persistence</h3>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom" wicket:id="persistence">
+        <div class="w3-display-container" wicket:id="tech"></div>
+      </div>
+    </div>
+
+    <!-- Infrastructure Section -->
+    <div class="w3-container w3-padding-32" id="infrastructureHeader">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Infrastructure</h3>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom" wicket:id="infrastructure">
+        <div class="w3-display-container" wicket:id="tech"></div>
+      </div>
+    </div>
+ 
+     
+    <!-- End page content -->
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-16" wicket:id="footerPanel"></footer>
+
+</body>
+</html>
